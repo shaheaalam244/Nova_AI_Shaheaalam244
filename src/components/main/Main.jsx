@@ -1,7 +1,14 @@
+import { useContext } from "react";
 import { assets } from "../../assets/assets";
 import "./Main.css";
+import { Context } from "../../context/context";
 
 export default function Main() {
+
+  const {onSent, recentPrompt, showResult, loading, formattedResultData, setInput, input} = useContext(Context);
+
+
+
   return (
     <div className="main">
         <div className="nav">
@@ -9,6 +16,10 @@ export default function Main() {
             <img src={assets.user} alt="User icon" />
         </div>
         <div className="main-container">
+
+          {
+            !showResult?
+            <>
           <div className="greet">
             <p><span>Hello, Dev.</span></p>
             <p>How can I help you?</p>
@@ -30,6 +41,43 @@ export default function Main() {
               <p>Improve readability of following code. </p>
               <img src={assets.code} alt="Compass icon" />
             </div>
+          </div>
+            </>
+            : 
+            <div className="result">
+              <div className="result-title">
+                <img src={assets.user} alt="User profile" />
+                <p>{recentPrompt}</p>
+              </div>
+              <div className="result-data">
+                <img src={assets.gemini} alt="Gemini icon" />
+                {loading ?
+                <div className="loader">
+                <hr />
+                <hr />
+                <hr />
+                </div>
+                :
+                <p dangerouslySetInnerHTML={{__html:formattedResultData}}></p>
+                }
+              </div>
+            </div>
+          }
+
+
+
+          <div className="main-bottom">
+            <div className="search-box">
+              <input onChange={(e) => setInput(e.target.value)} value={input} type="text" placeholder="Enter your question" />
+              <div>
+                <img src={assets.gallery} alt="Search with a photo in your gallery" />
+                <img src={assets.mic} alt="Record a voice message" />
+                <img onClick={() => onSent()} src={assets.send} alt="Send your prompt" />
+              </div>
+            </div>
+            <p className="bottom-info">
+              Gemini may display inaccurate information. Please double check.
+            </p>
           </div>
         </div>
     </div>
