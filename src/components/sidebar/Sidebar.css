@@ -28,7 +28,7 @@
     transition: all 0.3s ease;
 }
  .extended{
-    margin-left: 15px;
+    margin: 0px 10px 0px 5px;
 }
 .sidebar .new-chat:hover{
     background-color: grey;
@@ -38,6 +38,7 @@
 .sidebar .recent{
     display: flex;
     flex-direction: column;
+    animation: fadeIn 1.5s;
 }
 .sidebar .recent-title{
     margin-top: 30px;
@@ -66,5 +67,17 @@
 .sidebar .bottom-item{
     padding-right: 10px;
     cursor: pointer;
-
+}
+@media (max-width:540px) {
+    .sidebar{
+        display: none;
+    }
+    
+}
+a{
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    color: black;
 }

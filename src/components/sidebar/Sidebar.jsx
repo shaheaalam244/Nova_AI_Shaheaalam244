@@ -6,7 +6,8 @@ import { Context } from "../../context/context";
 export default function Sidebar() {
 
   const [extended, setExtended] = useState(false);
-  const {onSent, previousPrompts, setRecentPrompt} = useContext(Context);
+  const {onSent, previousPrompts, setRecentPrompt, newChat} = useContext(Context);
+
 
   const loadPrompt = async(prompt) => {
     setRecentPrompt(prompt);
@@ -18,7 +19,7 @@ export default function Sidebar() {
       <div className="top">
         <img src={assets.menu} alt="Menu icon" className="menu" onClick={() => setExtended(prev => !prev)} />
 
-        <div className={extended ? "new-chat extended" : "new-chat"}>
+        <div onClick={() => newChat()} className={extended ? "new-chat extended" : "new-chat"}>
           <img src={assets.plus} alt="New chat icon" />
           {extended? <p>New Chat</p> : null }
         </div>
@@ -37,12 +38,18 @@ export default function Sidebar() {
       </div>
       <div className="bottom">
         <div className="bottom-item recent-entry ">
+          <a href="https://gemini.google.com/faq">
           <img src={assets.question} alt="Question icon" />
+          
           {extended? <p>Help</p> : null } 
+          </a>
         </div>
         <div className="bottom-item recent-entry ">
+          <a href="https://myactivity.google.com/product/gemini?utm_source=gemini&pli=1">
+
           <img src={assets.history} alt="History icon" />
           {extended? <p>History</p> : null }
+          </a>
         </div>
         <div className="bottom-item recent-entry ">
           <img src={assets.setting} alt="Setting icon" />

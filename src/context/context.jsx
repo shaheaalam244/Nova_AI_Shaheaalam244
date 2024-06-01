@@ -5,7 +5,6 @@ import formatContentToHTML from "../utils/html-formatter";
 export const Context = createContext();
 
 const ContextProvider = (props) => {
-    // State variables
     const [input, setInput] = useState("");
     const [recentPrompt, setRecentPrompt] = useState("");
     const [previousPrompts, setPreviousPrompts] = useState([]);
@@ -14,12 +13,17 @@ const ContextProvider = (props) => {
     const [resultData, setResultData] = useState("");
     const [formattedResultData, setFormattedResultData] = useState("");
 
-    // Function to delay the display of each word in the result
     const wordToWordWriter = (index, nextWord) => {
         setTimeout(function () {
             setFormattedResultData(prev => prev + nextWord); 
         }, 50 * index);
     };
+
+    const newChat = () => {
+        setLoading(false);
+        setShowResult(false);
+
+    }
 
     const onSent = async (prompt) => {
         setResultData(""); 
@@ -61,6 +65,7 @@ const ContextProvider = (props) => {
         formattedResultData, 
         input,
         setInput,
+        newChat
     };
 
     return (
