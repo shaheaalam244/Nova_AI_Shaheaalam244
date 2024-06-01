@@ -1,5 +1,26 @@
-# Chatbot - Gemini of Gemini
-I coded main and sidebar so far. Spent a lot of time one styling issue. But so far it looks great.
-I coded some components and logic behind of the app. I try to make it as reactive as possible. And copy all of the Gemini's actions. So far I can send and get data and retrive previous datas and store them for future usages.  Styling is finished in this step and fully focus on other features.
+# Chatbot - Gemini of Gemini App
 
-To be continue...
+This project is a clone of Google's AI bot, Gemini, developed using the Gemini API and React.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+
+## Installation
+
+1. Clone the repository:
+   
+   ``git clone https://github.com/yourusername/gemini-clone-app.git``
+    ``cd gemini-clone-app``
+   
+2. Install dependencies:
+   ``npm install``
+   ``npm install @google/generative-ai``
+
+4. Start the development server
+   ``npm start``
+
+## Usage
+
+Interact with the AI bot by inputting standard or your own text queries and receiving responses from the Gemini API.
