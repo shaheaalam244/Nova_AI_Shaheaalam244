@@ -13,7 +13,8 @@ export default function Main() {
     <div className="main">
         <div className="nav">
             <p>Gemini</p>
-            <img src={assets.user} alt="User icon" />
+            <a href="https://github.com/Aburraq"><img src={assets.user} alt="User icon" /></a>
+            
         </div>
         <div className="main-container">
 
@@ -78,6 +79,7 @@ export default function Main() {
             <p className="bottom-info">
               Gemini may display inaccurate information. Please double check.
             </p>
+            <a href="https://github.com/Aburraq">Feel free to contribute, star or check other projects of Aburraq</a>
           </div>
         </div>
     </div>
