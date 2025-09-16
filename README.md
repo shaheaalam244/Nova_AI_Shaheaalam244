@@ -10,7 +10,7 @@ The primary objective of NOVA AI is to provide a smart, fast, and user-centric v
 
 ## Demo
 
-![NOVA AI](nora-ai-shaheaalam244.netlify.app)
+[NOVA AI](nora-ai-shaheaalam244.netlify.app)
 
 ## Prerequisites
 
