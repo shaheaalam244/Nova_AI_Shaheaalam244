@@ -8,9 +8,6 @@
 The primary objective of NOVA AI is to provide a smart, fast, and user-centric virtual assistant that leverages innovation, efficiency, and advanced technology to meet user needs effectively. It is designed to enhance productivity, simplify problem-solving, and deliver a more interactive and reliable digital experience.
 
 
-## Demo
-
-[NOVA AI](nora-ai-shaheaalam244.netlify.app)
 
 ## Prerequisites
 
@@ -40,4 +37,5 @@ If you want to contact me you can reach me at [Twitter](https://x.com/shaheaalam
 
 ## License
 
+[NOVA AI](nora-ai-shaheaalam244.netlify.app)
 This project is **free to use** and does not contains any license.
